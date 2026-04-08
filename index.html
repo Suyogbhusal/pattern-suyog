@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Patterns Demo</title>
+<title>Animated C Patterns Demo</title>
 <style>
 body {
     font-family: 'Courier New', monospace;
@@ -21,9 +21,8 @@ body {
     padding: 30px;
     border-radius: 20px;
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
     box-shadow: 0 0 50px rgba(0, 255, 255, 0.5);
-    animation: fadeIn 1.5s ease forwards;
 }
 
 h1 {
@@ -31,7 +30,6 @@ h1 {
     color: #00ffd5;
     font-size: 2.5rem;
     margin-bottom: 30px;
-    animation: slideDown 1s ease forwards;
 }
 
 .output-box {
@@ -40,95 +38,101 @@ h1 {
     border-radius: 12px;
     font-size: 1rem;
     line-height: 1.6;
+    white-space: pre;
 }
 
 .output-line {
     opacity: 0;
     animation: lineAppear 0.5s forwards;
-    animation-delay: var(--delay);
 }
 
 @keyframes lineAppear {
     from {opacity: 0; transform: translateX(-20px);}
     to {opacity: 1; transform: translateX(0);}
 }
-@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
-@keyframes slideDown { from {transform: translateY(-30px); opacity:0;} to {transform: translateY(0); opacity:1;} }
 </style>
 </head>
 <body>
 <div class="container">
     <h1>Triangle & Pyramid Patterns</h1>
-
-    <div class="output-box">
-        <!-- Right Triangle Filled -->
-        <div class="output-line" style="--delay:0.2s;">Right Triangle (Filled):</div>
-        <div class="output-line" style="--delay:0.4s;">*</div>
-        <div class="output-line" style="--delay:0.6s;">**</div>
-        <div class="output-line" style="--delay:0.8s;">***</div>
-        <div class="output-line" style="--delay:1.0s;">****</div>
-        <div class="output-line" style="--delay:1.2s;">*****</div>
-
-        <!-- Right Triangle Hollow -->
-        <div class="output-line" style="--delay:1.4s;">Right Triangle (Hollow):</div>
-        <div class="output-line" style="--delay:1.6s;">*</div>
-        <div class="output-line" style="--delay:1.8s;">**</div>
-        <div class="output-line" style="--delay:2.0s;">* *</div>
-        <div class="output-line" style="--delay:2.2s;">*  *</div>
-        <div class="output-line" style="--delay:2.4s;">*****</div>
-
-        <!-- Left Triangle Filled -->
-        <div class="output-line" style="--delay:2.6s;">Left Triangle (Filled):</div>
-        <div class="output-line" style="--delay:2.8s;">    *</div>
-        <div class="output-line" style="--delay:3.0s;">   **</div>
-        <div class="output-line" style="--delay:3.2s;">  ***</div>
-        <div class="output-line" style="--delay:3.4s;"> ****</div>
-        <div class="output-line" style="--delay:3.6s;">*****</div>
-
-        <!-- Left Triangle Hollow -->
-        <div class="output-line" style="--delay:3.8s;">Left Triangle (Hollow):</div>
-        <div class="output-line" style="--delay:4.0s;">    *</div>
-        <div class="output-line" style="--delay:4.2s;">   **</div>
-        <div class="output-line" style="--delay:4.4s;">  * *</div>
-        <div class="output-line" style="--delay:4.6s;"> *   *</div>
-        <div class="output-line" style="--delay:4.8s;">*****</div>
-
-        <!-- Full Pyramid Filled -->
-        <div class="output-line" style="--delay:5.0s;">Full Pyramid (Filled):</div>
-        <div class="output-line" style="--delay:5.2s;">    *</div>
-        <div class="output-line" style="--delay:5.4s;">   ***</div>
-        <div class="output-line" style="--delay:5.6s;">  *****</div>
-        <div class="output-line" style="--delay:5.8s;"> *******</div>
-        <div class="output-line" style="--delay:6.0s;">*********</div>
-
-        <!-- Full Pyramid Hollow -->
-        <div class="output-line" style="--delay:6.2s;">Full Pyramid (Hollow):</div>
-        <div class="output-line" style="--delay:6.4s;">    *</div>
-        <div class="output-line" style="--delay:6.6s;">   * *</div>
-        <div class="output-line" style="--delay:6.8s;">  *   *</div>
-        <div class="output-line" style="--delay:7.0s;"> *     *</div>
-        <div class="output-line" style="--delay:7.2s;">*********</div>
-
-        <!-- Inverted Full Pyramid Filled -->
-        <div class="output-line" style="--delay:7.4s;">Inverted Full Pyramid (Filled):</div>
-        <div class="output-line" style="--delay:7.6s;">*********</div>
-        <div class="output-line" style="--delay:7.8s;"> *******</div>
-        <div class="output-line" style="--delay:8.0s;">  *****</div>
-        <div class="output-line" style="--delay:8.2s;">   ***</div>
-        <div class="output-line" style="--delay:8.4s;">    *</div>
-
-        <!-- Diamond Pattern -->
-        <div class="output-line" style="--delay:8.6s;">Diamond Pattern:</div>
-        <div class="output-line" style="--delay:8.8s;">    *</div>
-        <div class="output-line" style="--delay:9.0s;">   ***</div>
-        <div class="output-line" style="--delay:9.2s;">  *****</div>
-        <div class="output-line" style="--delay:9.4s;"> *******</div>
-        <div class="output-line" style="--delay:9.6s;">*********</div>
-        <div class="output-line" style="--delay:9.8s;"> *******</div>
-        <div class="output-line" style="--delay:10.0s;">  *****</div>
-        <div class="output-line" style="--delay:10.2s;">   ***</div>
-        <div class="output-line" style="--delay:10.4s;">    *</div>
-    </div>
+    <div class="output-box" id="patterns"></div>
 </div>
+
+<script>
+const patternsDiv = document.getElementById('patterns');
+let delay = 0.2; // animation delay in seconds
+const n = 5; // number of rows
+
+function addLine(text) {
+    const div = document.createElement('div');
+    div.className = 'output-line';
+    div.style.animationDelay = `${delay}s`;
+    div.textContent = text;
+    patternsDiv.appendChild(div);
+    delay += 0.2;
+}
+
+// Right Triangle (Filled)
+addLine('Right Triangle (Filled):');
+for(let i=1;i<=n;i++){
+    addLine('*'.repeat(i));
+}
+
+// Right Triangle (Hollow)
+addLine('Right Triangle (Hollow):');
+for(let i=1;i<=n;i++){
+    let line = '';
+    for(let j=1;j<=i;j++){
+        if(j==1||j==i||i==n) line+='*';
+        else line+=' ';
+    }
+    addLine(line);
+}
+
+// Left Triangle (Filled)
+addLine('Left Triangle (Filled):');
+for(let i=1;i<=n;i++){
+    addLine(' '.repeat(n-i)+ '*'.repeat(i));
+}
+
+// Left Triangle (Hollow)
+addLine('Left Triangle (Hollow):');
+for(let i=1;i<=n;i++){
+    let line = ' '.repeat(n-i);
+    for(let j=1;j<=i;j++){
+        if(j==1||j==i||i==n) line+='*';
+        else line+=' ';
+    }
+    addLine(line);
+}
+
+// Full Pyramid (Filled)
+addLine('Full Pyramid (Filled):');
+for(let i=1;i<=n;i++){
+    addLine(' '.repeat(n-i) + '*'.repeat(2*i-1));
+}
+
+// Full Pyramid (Hollow)
+addLine('Full Pyramid (Hollow):');
+for(let i=1;i<=n;i++){
+    let line = ' '.repeat(n-i);
+    for(let j=1;j<=2*i-1;j++){
+        if(j==1||j==(2*i-1)||i==n) line+='*';
+        else line+=' ';
+    }
+    addLine(line);
+}
+
+// Diamond Pattern
+addLine('Diamond Pattern:');
+// Top Half
+for(let i=1;i<=n;i++){
+    addLine(' '.repeat(n-i) + '*'.repeat(2*i-1));
+}
+// Bottom Half
+for(let i=n-1;i>=1;i--){
+    addLine(' '.repeat(n-i) + '*'.repeat(2*i-1));
+}
+</script>
 </body>
 </html>
