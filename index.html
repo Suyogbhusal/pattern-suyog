@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Triangle & Pyramid Patterns Demo</title>
+<style>
+body {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 50px 20px;
+}
+
+.container {
+    background: rgba(0,0,0,0.85);
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.5);
+    animation: fadeIn 1.5s ease forwards;
+}
+
+h1 {
+    text-align: center;
+    color: #00ffd5;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    animation: slideDown 1s ease forwards;
+}
+
+.pattern-box {
+    background: rgba(0,0,0,0.9);
+    border-left: 5px solid #00ffea;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    overflow-x: auto;
+    animation: fadeIn 2s ease forwards;
+}
+
+.comment { color: #7fff00; font-style: italic; }
+.keyword { color: #ffd700; font-weight: bold; }
+.func { color: #00ffea; font-weight: bold; }
+
+.output-box {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.output-line {
+    opacity: 0;
+    animation: lineAppear 0.5s forwards;
+    animation-delay: var(--delay);
+}
+
+@keyframes lineAppear {
+    from {opacity: 0; transform: translateX(-20px);}
+    to {opacity: 1; transform: translateX(0);}
+}
+
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+@keyframes slideDown { from {transform: translateY(-30px); opacity:0;} to {transform: translateY(0); opacity:1;} }
+
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Triangle & Pyramid Patterns</h1>
+
+    <!-- Code Section -->
+    <div class="pattern-box">
+<pre>
+<span class="comment">// Right Triangle (Filled & Hollow)</span>
+<span class="keyword">int</span> i, j, n = 5;
+<span class="func">printf</span>("Right Triangle Filled:\\n");
+<span class="comment">// Loop for filled pattern</span>
+<span class="func">printf</span>("Right Triangle Hollow:\\n");
+<span class="comment">// Loop for hollow pattern</span>
+
+<span class="comment">// Left Triangle, Inverted Right & Left, Full Pyramid, Inverted Full Pyramid, Diamond</span>
+<span class="comment">// Each implemented with nested loops</span>
+</pre>
+    </div>
+
+    <!-- Output Section -->
+    <div class="output-box">
+        <!-- Right Triangle Filled -->
+        <div class="output-line" style="--delay:0.2s;">Right Triangle (Filled):</div>
+        <div class="output-line" style="--delay:0.4s;">*</div>
+        <div class="output-line" style="--delay:0.6s;">**</div>
+        <div class="output-line" style="--delay:0.8s;">***</div>
+        <div class="output-line" style="--delay:1.0s;">****</div>
+        <div class="output-line" style="--delay:1.2s;">*****</div>
+
+        <!-- Right Triangle Hollow -->
+        <div class="output-line" style="--delay:1.4s;">Right Triangle (Hollow):</div>
+        <div class="output-line" style="--delay:1.6s;">*</div>
+        <div class="output-line" style="--delay:1.8s;">**</div>
+        <div class="output-line" style="--delay:2.0s;">* *</div>
+        <div class="output-line" style="--delay:2.2s;">*  *</div>
+        <div class="output-line" style="--delay:2.4s;">*****</div>
+
+        <!-- Left Triangle Filled -->
+        <div class="output-line" style="--delay:2.6s;">Left Triangle (Filled):</div>
+        <div class="output-line" style="--delay:2.8s;">    *</div>
+        <div class="output-line" style="--delay:3.0s;">   **</div>
+        <div class="output-line" style="--delay:3.2s;">  ***</div>
+        <div class="output-line" style="--delay:3.4s;"> ****</div>
+        <div class="output-line" style="--delay:3.6s;">*****</div>
+
+        <!-- Full Pyramid -->
+        <div class="output-line" style="--delay:3.8s;">Full Pyramid:</div>
+        <div class="output-line" style="--delay:4.0s;">    *</div>
+        <div class="output-line" style="--delay:4.2s;">   ***</div>
+        <div class="output-line" style="--delay:4.4s;">  *****</div>
+        <div class="output-line" style="--delay:4.6s;"> *******</div>
+        <div class="output-line" style="--delay:4.8s;">*********</div>
+
+        <!-- Diamond -->
+        <div class="output-line" style="--delay:5.0s;">Diamond Pattern:</div>
+        <div class="output-line" style="--delay:5.2s;">    *</div>
+        <div class="output-line" style="--delay:5.4s;">   ***</div>
+        <div class="output-line" style="--delay:5.6s;">  *****</div>
+        <div class="output-line" style="--delay:5.8s;"> *******</div>
+        <div class="output-line" style="--delay:6.0s;">*********</div>
+        <div class="output-line" style="--delay:6.2s;"> *******</div>
+        <div class="output-line" style="--delay:6.4s;">  *****</div>
+        <div class="output-line" style="--delay:6.6s;">   ***</div>
+        <div class="output-line" style="--delay:6.8s;">    *</div>
+    </div>
+</div>
+</body>
+</html>
